@@ -17,14 +17,14 @@
             <img src="./img/logoAgenda.png" alt="Img Contacts Agenda">
             <h1>Contacts</h1>
         </header>
-        <form id="name" action="">
+        <form id="form" action="">
             <input type="text" required placeholder="Name" name="" id="name" />
             <input type="number" required placeholder="Tell number" name="" id="ContactNumber" />
             <button type="submit">Add</button>
         </form>
         <table cellspacing="0">
             <thead>
-                <tr>
+                <tr id="table">
                     <th>
                         Person Name
                     </th>
@@ -35,8 +35,8 @@
             </thead>
             <tbody>
             <tfoot>
-                <tr>
-                    <td>Name</td>
+                <tr id="row" style="display: none;">
+                    <td id="Name">Name</td>
                     <td id="ContactNumber">---</td>
                 </tr>
             </tfoot>

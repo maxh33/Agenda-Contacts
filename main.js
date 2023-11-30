@@ -1,7 +1,6 @@
-const form= document.getElementById('name');
+const form= document.getElementById('form');
 const name = [];
-const  tell= [];
-
+const tell= [];
 
 let line = '';
 
@@ -9,26 +8,26 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 
     addLine();
-    insertNumber();
+    updateTable();
     });
 
 function addLine(){
     const inputName = document.getElementById('name');
     const inputTell = document.getElementById('ContactNumber');
 
-    if (inputName.includes(inputName.value)) {
+    if (name.includes(inputName.value)) {
         alert(`Contact Name ${inputName.value} Already inserted`);
     } else {
 
-    inputName.push(inputName.value);
-    inputTell.push(parseFloat(inputTell.value));
+    name.push(inputName.value);
+    tell.push(toString(inputTell.value));
 
-    let line = '<tr>';
-    line += `<td>${inputName.value}</td>`;
-    line += `<td>${inputTell.value}</td>`;
-        line += '</tr>';
+    let row = '<tr>'; 
+    row += `<td>${inputName.value}</td>`;
+    row += `<td>${inputTell.value}</td>`;
+        row += '</tr>';
 
-    line += line;
+    line += row;
     }
 
     inputName.value = '';
